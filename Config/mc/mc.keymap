@@ -1,0 +1,11 @@
+~/.config/mc/ini
+
+[panel]
+Alt-i = shell:traceforge identify --input %f
+Alt-r = shell:traceforge restore --log %f
+Alt-m = shell:traceforge manifest --output manifest.json
+Alt-c = shell:traceforge connect --mode termux
+Alt-b = shell:cat ~/TraceForge/connect/banners/termux.txt
+
+[editor]
+F5 = shell:traceforge verify --log %f

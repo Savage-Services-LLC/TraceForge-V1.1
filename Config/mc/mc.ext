@@ -1,0 +1,3 @@
+# Run restore module on .log files
+regex/\.log$
+        Open=traceforge restore --teardown %f

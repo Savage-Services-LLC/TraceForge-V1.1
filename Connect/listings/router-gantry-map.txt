@@ -1,0 +1,3 @@
+PSU → TB6600 → Stepper Motor → Ball Screw → Gantry Rail
+Limit Switches: X+, X−, Y+, Y−, Z+
+Emergency Stop: Inline with PSU enable

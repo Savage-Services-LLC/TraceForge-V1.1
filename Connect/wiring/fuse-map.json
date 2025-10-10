@@ -1,0 +1,7 @@
+{
+  "unit_id": "XJ-4421",
+    "fuses": [
+        { "label": "F1", "rating": "5A", "location": "Top-left rail", "status": "Verified" },
+            { "label": "F2", "rating": "10A", "location": "Mid-board", "status": "Replaced" }
+              ]
+              }

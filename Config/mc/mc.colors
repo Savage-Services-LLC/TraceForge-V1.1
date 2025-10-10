@@ -1,0 +1,3 @@
+base_color=default=black;lightgray
+selected=white;blue
+marked=yellow;black

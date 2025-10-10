@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <title>TraceForge Audit Log</title>
+      <link rel="stylesheet" href="style.css" />
+      </head>
+      <body>
+        <div class="traceforge-overlay">
+            <h2>📜 TraceForge Browser Audit Log</h2>
+                <p><strong>Session:</strong> TM-20251009-01:58</p>
+                    <p><strong>Status:</strong> ✅ Tampermonkey bridge active</p>
+                        <hr />
+                            <div id="audit-entries">
+                                  <!-- Entries will be injected here -->
+                                      </div>
+                                          <footer>Savage Services LLC — Forensic CLI Identity</footer>
+                                            </div>
+                                            
+                                              <script>
+                                                  const container = document.getElementById("audit-entries");
+                                                      const keys = Object.keys(localStorage).filter(k => k.startsWith("traceforge_audit_"));
+                                                      
+                                                          if (keys.length === 0) {
+                                                                container.innerHTML = "<p>No audit entries found.</p>";
+                                                                    } else {
+                                                                    keys.sort().reverse().forEach(key => {
+                                                                            const entry = JSON.parse(localStorage.getItem(key));
+                                                                                    const block = document.createElement("div");
+                                                                                            block.innerHTML = `
+                                                                                                      <p><strong>Event:</strong> ${entry.event}</p>
+                                                                                                                <p><strong>Source:</strong> ${entry.source}</p>
+                                                                                                                          <p><strong>Timestamp:</strong> ${entry.timestamp}</p>
+                                                                                                                                    <hr />
+                                                                                                                                            `;
+                                                                                                                                            
+                                                                                                                                            container.appendChild(block);
+                                                                                                                                                  });
+                                                                                                                                                      }
+                                                                                                                                                        </script>
+                                                                                                                                                        </body>
+                                                                                                                                                        </html>
+                                                                                                                                                        `

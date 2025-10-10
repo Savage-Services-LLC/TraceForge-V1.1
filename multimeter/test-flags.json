@@ -1,0 +1,5 @@
+{
+  "FireWire Card 1": {"continuity": "pass", "voltage": "n/a"},
+    "Stepper Motor X": {"resistance": "2.3Ω", "status": "ok"},
+      "Fuse F1": {"voltage": "24.1V", "status": "active"}
+      }

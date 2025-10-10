@@ -1,0 +1,3 @@
+Path,Reading,Units,Status,Notes
+RIB_A.PIN1 → REG_7812,0.3,Ohms,PASS,Stable
+TERM_B.PIN2 → COIL_A,OL,Ohms,FAIL,Open circuit

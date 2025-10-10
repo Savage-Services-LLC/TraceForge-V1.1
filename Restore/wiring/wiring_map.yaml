@@ -1,0 +1,15 @@
+session_id: TF2025-ANCH-001
+board: board1
+connectors:
+  RIB_A:
+      - PIN1: +5V
+          - PIN2: GND
+              - PIN3: DATA
+                  - PIN4: CLK
+                    TERM_B:
+                        - PIN1: +15V
+                            - PIN2: -15V
+                                - PIN3: GND
+                                routes:
+                                  REG_7812 → RIB_A.PIN1
+                                    COIL_A → TERM_B.PIN1

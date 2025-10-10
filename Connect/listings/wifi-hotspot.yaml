@@ -1,0 +1,5 @@
+ssid: TraceForge-Uplink
+password: salvageOps2025
+interface: wlan0
+auto_connect: true
+log_level: verbose

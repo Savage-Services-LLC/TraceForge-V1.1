@@ -1,0 +1,6 @@
+Host traceforge-node
+  HostName 192.168.1.42
+    User salvager
+      IdentityFile ~/.ssh/traceforge_id_rsa
+        Port 22
+          ForwardAgent yes

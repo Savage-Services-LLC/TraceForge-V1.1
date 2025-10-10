@@ -1,0 +1,9 @@
+bundle: teardown-kit-drop7
+files:
+  - pci-firewire-teardown.md
+    - router-gantry-wiring.txt
+      - multimeter-logs.csv
+        - fuse-block-map.yaml
+          - boardsort-grade-report.json
+          verified: true
+          deployed: false

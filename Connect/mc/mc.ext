@@ -1,0 +1,9 @@
+# Automatically run TraceForge modules based on file extension
+regex/\.manifest$
+    Open=traceforge manifest --input %f
+    
+    regex/\.teardown$
+        Open=traceforge restore --log %f
+        
+        regex/\.qr$
+            Open=traceforge connect --session $(cat %f)

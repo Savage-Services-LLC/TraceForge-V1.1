@@ -1,0 +1,4 @@
+Component,Test Type,Reading,Status
+FireWire Card 1,Continuity,Pass,Verified
+Stepper Motor X,Resistance,2.3Ω,OK
+Fuse F1,Voltage,24.1V,Active

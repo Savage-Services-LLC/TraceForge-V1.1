@@ -1,0 +1,6 @@
++ t
+    traceforge identify --input %f
+    + r
+        traceforge restore --log %f
+        + m
+            traceforge manifest --output manifest.json

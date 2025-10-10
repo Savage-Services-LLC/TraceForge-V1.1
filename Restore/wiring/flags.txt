@@ -1,0 +1,3 @@
+RIB_A,PIN3,GoldFlash
+TERM_B,PIN2,ThermalDamage
+COAX_IN,PIN1,SystemTest

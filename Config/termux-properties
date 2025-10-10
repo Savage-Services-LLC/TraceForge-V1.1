@@ -1,0 +1,3 @@
+extra-keys = [['ESC','TAB','CTRL','ALT','UP','DOWN'], ['TRACE','IDENTIFY','RESTORE','MANIFEST','AUDIT','CONNECT']]
+bell-character = ignore
+use-black-ui = true

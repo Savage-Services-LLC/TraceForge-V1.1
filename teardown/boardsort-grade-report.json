@@ -1,0 +1,8 @@
+{
+  "report_id": "grade-drop7",
+    "boards": [
+        {"type": "PCIe FireWire", "grade": "High Peripheral", "weight_lb": 1.2},
+            {"type": "Terminal Block", "grade": "Mid Grade", "weight_lb": 0.8}
+              ],
+                "estimated_payout": 7.65
+                }

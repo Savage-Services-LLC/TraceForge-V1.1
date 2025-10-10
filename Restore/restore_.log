@@ -1,0 +1,13 @@
+🔧 TraceForge Restoration Log – 
+Date: 2025-10-05
+----------------------------------------
+⚠️ No SYSTEM TEST label found
+🧩 Wiring logic: Verified continuity from input connector to transformer
+🧪 Fuse integrity: Confirmed with multimeter
+🔌 Connector layout: 3-pin input, 2-pin output, labeled J5 and J6
+🧠 Transformer: TAMD1 TO-926K – coil resistance verified
+🧠 Capacitors: 3x 300GF 203 – no bulging or leakage
+🧠 Heat sink: Aluminum, mounted on TO-220 package – thermal paste intact
+⚠️ Note: Minor discoloration near diode D4 – no continuity loss
+📦 Restoration Status: VERIFIED – Ready for resale or submission
+🔖 TraceForge Overlay: TF_RESTORE/ – QR insert available

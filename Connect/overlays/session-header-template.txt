@@ -1,0 +1,6 @@
+TRACEFORGE SESSION HEADER
+Module: {module}
+Unit: {unit_id}
+Timestamp: {timestamp}
+Hash: {hash}
+Verified: ✅

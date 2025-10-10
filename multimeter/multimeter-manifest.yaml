@@ -1,0 +1,8 @@
+bundle: multimeter-drop7
+files:
+  - readings.csv
+    - test-flags.json
+      - probe-map.yaml
+        - calibration.md
+        verified: true
+        deployed: false

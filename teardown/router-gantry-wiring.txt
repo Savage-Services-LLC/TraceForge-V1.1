@@ -1,0 +1,4 @@
+PSU → TB6600 → Stepper Motor → Ball Screw → Gantry Rail
+Limit Switches: X+, X−, Y+, Y−, Z+
+Emergency Stop: Inline with PSU enable
+Fuse Block: F1 (24V), F2 (12V), F3 (5V)

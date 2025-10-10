@@ -1,0 +1,11 @@
+{
+  "bundle": "Peripheral_Grade_A",
+    "pins": {
+        "RIB_A": ["+5V", "GND", "DATA", "CLK"],
+            "TERM_B": ["+15V", "-15V", "GND"]
+              },
+                "flags": {
+                    "RIB_A.PIN3": "GoldFlash",
+                        "TERM_B.PIN2": "ThermalDamage"
+                          }
+                          }

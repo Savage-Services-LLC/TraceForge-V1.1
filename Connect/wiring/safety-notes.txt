@@ -1,0 +1,4 @@
+⚠️ Electrical Safety Overlay — Unit XJ-4421
+- Ground before testing F2
+- Avoid shorting IC cluster during capacitor removal
+- Use anti-static wrap post-teardown

@@ -1,0 +1,5 @@
+file=*.log brown
+file=*.manifest green
+file=*.teardown yellow
+file=*.qr cyan
+directory=~/TraceForge/Config/ brightblue

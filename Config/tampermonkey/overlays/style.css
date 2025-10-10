@@ -1,0 +1,46 @@
+.traceforge-overlay {
+  font-family: monospace;
+    background-color: #111;
+      color: #00ffcc;
+        border: 2px solid #00ffcc;
+          padding: 16px;
+            margin: 20px auto;
+              width: 90%;
+                max-width: 600px;
+                  box-shadow: 0 0 10px #00ffcc;
+                    border-radius: 6px;
+                      z-index: 9999;
+                      }
+                      
+                      .traceforge-overlay h2 {
+                        font-size: 1.5em;
+                          margin-bottom: 8px;
+                            color: #00ffff;
+                            }
+                            
+                            .traceforge-overlay p {
+                              margin: 6px 0;
+                                font-size: 1em;
+                                }
+                                
+                                .traceforge-overlay footer {
+                                  margin-top: 12px;
+                                    font-size: 0.9em;
+                                      color: #888;
+                                        text-align: center;
+                                        }
+                                        
+                                        .traceforge-banner {
+                                          position: fixed;
+                                            top: 0;
+                                              left: 0;
+                                                width: 100%;
+                                                  background-color: #222;
+                                                    color: #00ffcc;
+                                                      font-family: monospace;
+                                                        font-size: 1.2em;
+                                                          padding: 8px;
+                                                            text-align: center;
+                                                              box-shadow: 0 2px 6px #00ffcc;
+                                                                z-index: 10000;
+                                                                }

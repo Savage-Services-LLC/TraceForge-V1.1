@@ -1,0 +1,11 @@
++ t
+    TraceForge Teardown
+        traceforge restore --log teardown_$(date -u +"%Y%m%d").log
+        
+        + i
+            TraceForge Identify
+                traceforge identify --input board.jpg
+                
+                + m
+                    TraceForge Manifest
+                        traceforge manifest --source teardown_$(date -u +"%Y%m%d").log

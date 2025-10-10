@@ -1,0 +1,8 @@
+ENTRY TraceForge Config
+    PATH ~/TraceForge/Config/
+    
+    ENTRY TraceForge Logs
+        PATH ~/TraceForge/Logs/
+        
+        ENTRY TraceForge Teardown
+            PATH ~/Traceforge-V1.1/Connect/teardown/

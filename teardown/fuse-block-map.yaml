@@ -1,0 +1,13 @@
+fuse_block:
+  F1:
+      voltage: 24V
+          rating: 5A
+              status: active
+                F2:
+                    voltage: 12V
+                        rating: 10A
+                            status: spare
+                              F3:
+                                  voltage: 5V
+                                      rating: 3A
+                                          status: active

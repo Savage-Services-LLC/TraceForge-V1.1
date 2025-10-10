@@ -1,0 +1,9 @@
+bundle: salvage-connect-kit
+modules:
+  - wifi-hotspot.yaml
+    - boardsort-drop7.json
+      - ebay-firewire-listing.md
+        - router-gantry-map.txt
+          - terminal-blocks.csv
+          verified: true
+          deployed: false

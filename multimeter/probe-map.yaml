@@ -1,0 +1,9 @@
+FireWire Card 1:
+  - pin_1: ground
+    - pin_2: 5V rail
+      - pin_3: signal
+      Stepper Motor X:
+        - red: A+
+          - blue: A−
+            - green: B+
+              - black: B−

@@ -1,0 +1,10 @@
+TRACEFORGE TEARDOWN LOG
+Unit ID: ____________
+Timestamp: ____________
+Operator: ____________
+Steps Completed:
+- [ ] Disconnect ribbon connector
+- [ ] Remove capacitor cluster
+- [ ] Test fuses
+- [ ] Log results
+- [ ] Trigger restore

@@ -1,0 +1,11 @@
+{
+  "unit_id": "XJ-4421",
+    "steps": {
+        "ribbon_disconnected": true,
+            "capacitor_removed": true,
+                "fuses_tested": true,
+                    "log_created": true,
+                        "restore_triggered": false
+                          },
+                            "status": "in_progress"
+                            }
