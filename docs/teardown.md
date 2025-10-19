@@ -1,0 +1,1 @@
+Signals teardown logging session.

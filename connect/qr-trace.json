@@ -1,0 +1,14 @@
+{
+  "firewire_card_1": {
+      "qr_code": "qr/firewire_card_1.png",
+          "grade": "high-peripheral",
+              "teardown_log": "logs/firewire_card_1.md",
+                  "resale_packet": "packets/firewire_card_1.pdf"
+                    },
+                      "pci_audio_module": {
+                          "qr_code": "qr/pci_audio_module.png",
+                              "grade": "mid-grade",
+                                  "teardown_log": "logs/pci_audio_module.md",
+                                      "resale_packet": "packets/pci_audio_module.pdf"
+                                        }
+                                        }

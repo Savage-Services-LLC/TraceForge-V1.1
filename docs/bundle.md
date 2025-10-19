@@ -1,0 +1,1 @@
+Marks grouped resale kit creation.

@@ -1,0 +1,1 @@
+echo "AddHotlistEntry teardown-kit-drop7 ~/Traceforge-V1.1/connect" >> ~/.config/mc/hotlist

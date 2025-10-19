@@ -1,0 +1,1 @@
+Displays banner for component validation.

@@ -39,4 +39,15 @@ bash ./scripts/manifest.sh "$BOARD_IMG"
 
 echo "──────────────────────────────────────────────"
 echo "TRACEFORGE COMPLETE – Logs and overlays ready"
-echo "──────────────────────────────────────────────"
+echo "──────────────────────────────────────────────"#!/bin/bash
+# traceforge.sh — CLI Wrapper
+source overlays/traceforge_colors.sh
+
+case "$1" in
+  verify)
+      bash modules/verify/tracebundle.sh "${@:2}"
+          ;;
+            *)
+                echo -e "${RED}Unknown module. Try: traceforge verify --target example.com${NC}"
+                    ;;
+                    esac

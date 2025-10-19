@@ -1,0 +1,12 @@
+bundle_id: teardown-kit-drop7
+timestamp: 2025-10-09T18:59:00Z
+grade_profile: high-peripheral
+components:
+  - firewire_card_1
+    - pci_audio_module
+      - gold_ribbon_connector
+      sync_targets:
+        - github
+          - boardsort
+            - local_archive
+            flags:
