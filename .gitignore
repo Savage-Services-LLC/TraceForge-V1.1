@@ -1,0 +1,28 @@
+# 🔧 Shell artifacts
+*.sh~
+*.bak
+*.swp
+
+# 📜 Audit logs
+audit/
+*.log
+
+# 📦 Manifests
+manifests/
+manifest_*.csv
+
+# 🧩 Overlays
+overlays/
+*.csv
+
+# 💻 System files
+.DS_Store
+Thumbs.db
+
+# 🧪 Test outputs
+*.tmp
+*.test
+
+# 🚫 Ignore compiled binaries (if any)
+*.out
+*.exe

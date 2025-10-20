@@ -1,0 +1,69 @@
+{
+  "name": "traceforge-cli",
+  "version": "1.0.0",
+  "description": "Modular CLI suite for salvage workflows, forensic logging, and branded restoration ops",
+  "main": "index.js",
+  "bin": {
+    "traceforge": "./cli.js"
+  },
+  "scripts": {
+    "identify": "node modules/identify.js",
+    "verify": "node modules/verify.js",
+    "restore": "node modules/restore.js",
+    "deploy": "node modules/deploy.js",
+    "connect": "node modules/connect.js",
+    "manifest": "node modules/manifest.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+      "cli",
+          "termux",
+              "salvage",
+                  "boardsort",
+                      "forensic",
+                          "traceforge",
+                              "modular",
+                                  "restoration",
+                                      "automation"
+                                        ],
+                                          "author": "Shannon @ Savage Services LLC",
+                                            "license": "MIT",
+                                              "engines": {
+                                                  "node": ">=18"
+                                                    },
+                                                      "dependencies": {
+                                                          "chalk": "^5.3.0",
+                                                              "inquirer": "^9.2.3",
+                                                                  "commander": "^11.0.0",
+                                                                      "fs-extra": "^11.1.1"
+                                                                        }
+                                                                        }{
+  "name": "home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "crypto-js": "^4.2.0",
+    "debug": "^4.4.3",
+    "express": "^5.1.0",
+    "get-caller-file": "^2.0.5",
+    "progress": "^2.0.3",
+    "puppeteer-core": "^24.23.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "name": "traceforge-cli",
+    "main": "main.js",
+      "scripts": { "start": "node main.js" }
+      }
+  },
