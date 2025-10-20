@@ -1,0 +1,4 @@
+AssetID: rf_module002
+BoardType: RF Module
+SalvageGrade: C
+TeardownNotes: Gold trace partially degraded; capacitor cluster damaged; oxidation present across pin array
