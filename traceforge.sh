@@ -1,51 +1,28 @@
 #!/bin/bash
-# TraceForge-V1.1 CLI Router
-# Branded salvage ops with audit logging and overlay routing
 
-LOG_DIR="./audit"
-OVERLAY_DIR="./overlays"
-mkdir -p "$LOG_DIR" "$OVERLAY_DIR"
+source env_check.sh
 
-COMMAND="$1"
-shift
+echo "🛠️ TraceForge-V1.2 CLI Router"
+cat banner.txt
+
+COMMAND=$1
+ASSET=$2
+
+# Log command routing
+echo "[$(date)] ROUTE: $COMMAND $ASSET" >> .audit/trace.log
 
 case "$COMMAND" in
-  list)
-    ITEM=""
-    TYPE=""
-    BRAND=""
-    CONDITION=""
-    OVERLAY=""
-
-    while [[ $# -gt 0 ]]; do
-      case "$1" in
-        --item) ITEM="$2"; shift ;;
-        --type) TYPE="$2"; shift ;;
-        --brand) BRAND="$2"; shift ;;
-        --condition) CONDITION="$2"; shift ;;
-        --overlay) OVERLAY="$2"; shift ;;
-      esac
-      shift
-    done
-
-    LOG_FILE="$LOG_DIR/list_$(date +%Y%m%d_%H%M%S).log"
-    echo "[TraceForge] Listing item: $ITEM" | tee -a "$LOG_FILE"
-    echo "  Type: $TYPE" | tee -a "$LOG_FILE"
-    echo "  Brand: $BRAND" | tee -a "$LOG_FILE"
-    echo "  Condition: $CONDITION" | tee -a "$LOG_FILE"
-    echo "  Overlay: $OVERLAY" | tee -a "$LOG_FILE"
-
-    # Optional: write to overlay file
-    echo "$ITEM,$TYPE,$BRAND,$CONDITION" >> "$OVERLAY_DIR/$OVERLAY.csv"
-    echo "[TraceForge] Entry routed to overlay: $OVERLAY.csv" | tee -a "$LOG_FILE"
+  teardown)
+    bash ActiveModules/hardware_teardown.sh "$ASSET"
     ;;
-
-  manifest)
-    echo "[TraceForge] Manifest routing not yet scaffolded." ;;
   overlay)
-    echo "[TraceForge] Overlay routing not yet scaffolded." ;;
+    bash ActiveModules/overlay.sh "$ASSET"
+    ;;
+  manifest)
+    bash ActiveModules/manifest.sh
+    ;;
   *)
-    echo "[TraceForge] Unknown command: $COMMAND"
-    echo "Usage: traceforge {list|manifest|overlay} [options]"
+    echo "❌ Unknown command: $COMMAND"
+    echo "Usage: ./traceforge.sh [teardown|overlay|manifest] [asset_id]"
     ;;
 esac
