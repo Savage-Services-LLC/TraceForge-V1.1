@@ -1,79 +1,77 @@
-#TraceForge-V1.1
+# 🔍 TraceForge-V1.2 | Modular Salvage CLI Suite
 
-Modular CLI suite for branded salvage operations, teardown logging, and forensic-grade resale prep. Built by Savage Services LLC for transparent asset recovery, audit-integrated overlays, and stealth-grade deployment.
-
----
-
-🔧 Modules
-
-| Script           | Purpose                                                                 |
-|------------------|-------------------------------------------------------------------------|
-| init.sh        | Bootstraps environment, audit structure, and branded CLI identity       |
-| manifest.sh    | Generates teardown manifests with timestamped audit entries             |
-| overlay.sh     | Creates branded resale overlays with provenance and QR routing          |
-| traceforge.sh  | Master CLI router for branded command execution and audit logging       |
-| list.sh        | Displays recent teardown logs or overlay activity with filters          |
-| sync.sh        | Syncs audit logs and overlays to remote trace bundles or resale platforms |
-| tag_release.sh | Tags and pushes versioned releases to GitHub                            |
+TraceForge-V1.2 is a branded, audit-integrated CLI ecosystem for modular salvage, teardown logging, and resale overlay generation. Built by Savage Services LLC, it routes both hardware and jewelry assets through forensic-grade workflows—ensuring traceability, trust, and branded identity at every step.
 
 ---
 
-🧭 Directory Layout
+## 🧠 Core Features
 
+- 🧩 Modular CLI routing via `traceforge.sh`
+- 🔥 Branded boot trigger via `init.sh`
+- 🕵️ Audit logging to `.audit/` with timestamped asset IDs
+- 🎨 Overlay injection for resale bundles
+- 📦 Manifest generation for teardown-grade assets
+
+---
+
+## 🗂️ Directory Structure
+
+TraceForge-V1.2/
+├── init.sh                  # Boot trigger
+├── traceforge.sh            # Master router
+├── manifest.sh              # Resale manifest generator
+├── overlay.sh               # Overlay injector
+├── modules/                 # CLI modules
+│   ├── hardware_teardown.sh
+│   └── jewelry_overlay.sh
+├── assets/                  # Salvage bundles
+│   ├── hardware/
+│   └── jewelry/
+├── overlays/                # Branded resale overlays
+├── .audit/                  # Forensic logs
+├── ActiveModules/
+│   ├── tracebundle/
+│   │   ├── hardware_teardown.sh
+│   │   └── jewelry_overlay.sh
+│   └── banner.txt
 `
-TraceForge-V1.1/
-├── init.sh
-├── manifest.sh
-├── overlay.sh
-├── traceforge.sh
-├── list.sh
-├── sync.sh
-├── tag_release.sh
-├── README.md
-├── .audit/              # Forensic logs
-├── overlays/            # Branded resale overlays
-├── assets/              # Salvage-grade hardware or jewelry bundles
-├── .gitignore
-`
 
 ---
 
-🚀 Usage Examples
+💍 Dual Asset Routing
+
+TraceForge-V1.2 supports two asset classes:
+
+- Hardware: RC boards, satellite modules, teardown-grade salvage
+- Jewelry: Vintage rings, pendants, maker’s mark decoding
+
+Each asset is routed through branded CLI modules, assessed for salvage grade, and injected with resale overlays.
+
+---
+
+🚀 Getting Started
 
 `bash
+chmod +x init.sh
 ./init.sh
-./manifest.sh --asset "RF Board A" --grade "salvage"
-./overlay.sh --asset "Vintage Ring" --qr "https://your.link"
-./traceforge.sh --module overlay --asset "Ring"
-./list.sh --filter "Ring"
-./sync.sh --target "resale_bundle"
-./tag_release.sh --version v1.2 --message "Overlay module added"
 `
 
----
-
-🔖 Releases
-
-| Version | Description                     |
-|---------|---------------------------------|
-| v1.0  | Initial CLI suite               |
-| v1.1  | Audit + sync modules added      |
-| v1.2  | Overlay + router logic deployed |
+Follow prompts to select asset type and route through teardown or overlay modules.
 
 ---
 
-🛡️ Ruleset Highlights
+🛡️ Audit & Trust
 
-- All modules log to .audit/ with timestamp and asset ID
-- Overlays include branded footer and QR provenance
-- Sync bundles are versioned with YYYYMMDD_HHMMSS
-- No civic ops, no outreach themes—pure salvage and resale logic
+Every module logs to .audit/ with timestamped asset IDs. Overlays include provenance, salvage grade, and teardown notes—reinforcing buyer trust and forensic traceability.
 
 ---
 
-🧠 Author
+🧭 Maintainer
 
 Savage Services LLC  
-Anchorage, Alaska  
-Modular salvage, branded CLI tooling, and forensic-grade asset recovery.
+Modular salvage, branded CLI tooling, and community-focused innovation  
+Anchorage, Alaska
 
+---
+
+`
