@@ -1,30 +1,29 @@
 #!/bin/bash
-# TraceForge-V1.1 Manifest Generator
-# Bundles teardown logs, overlays, and resale metadata into a branded manifest
 
-MANIFEST_DIR="./manifests"
-AUDIT_DIR="./audit"
-OVERLAY_DIR="./overlays"
-mkdir -p "$MANIFEST_DIR" "$AUDIT_DIR"
+ASSET_ID=$1
+ASSET_FILE="Assets/$ASSET_ID.txt"
+OVERLAY_FILE="Assets/${ASSET_ID}_overlay.txt"
+MANIFEST_DIR="ResaleDrops"
+MANIFEST_FILE="$MANIFEST_DIR/${ASSET_ID}_manifest.zip"
 
-TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-MANIFEST_FILE="$MANIFEST_DIR/manifest_$TIMESTAMP.csv"
-LOG_FILE="$AUDIT_DIR/manifest_$TIMESTAMP.log"
+# Ensure manifest directory exists
+mkdir -p "$MANIFEST_DIR"
 
-echo "[TraceForge] Generating manifest: $MANIFEST_FILE" | tee -a "$LOG_FILE"
+# Validate required files
+if [ ! -f "$ASSET_FILE" ]; then
+  echo "❌ Missing asset file: $ASSET_FILE"
+  exit 1
+fi
 
-# Header
-echo "Item,Type,Brand,Condition,Overlay" > "$MANIFEST_FILE"
+if [ ! -f "$OVERLAY_FILE" ]; then
+  echo "❌ Missing overlay file: $OVERLAY_FILE"
+  exit 1
+fi
 
-# Aggregate overlays
-for overlay in "$OVERLAY_DIR"/*.csv; do
-  OVERLAY_NAME=$(basename "$overlay" .csv)
-    echo "[TraceForge] Routing overlay: $OVERLAY_NAME" | tee -a "$LOG_FILE"
-    
-      while IFS=',' read -r ITEM TYPE BRAND CONDITION; do
-          echo "$ITEM,$TYPE,$BRAND,$CONDITION,$OVERLAY_NAME" >> "$MANIFEST_FILE"
-              echo "  → $ITEM ($TYPE, $BRAND, $CONDITION)" | tee -a "$LOG_FILE"
-                done < "$overlay"
-                done
-                
-                echo "[TraceForge] Manifest complete: $MANIFEST_FILE" | tee -a "$LOG_FILE"
+# Create manifest bundle
+zip -j "$MANIFEST_FILE" "$ASSET_FILE" "$OVERLAY_FILE" .audit/trace.log .audit/env_trace.log
+
+# Log manifest creation
+echo "[$(date)] MANIFEST: $ASSET_ID | Bundle=$MANIFEST_FILE | Status=ready" >> .audit/trace.log
+
+echo "✅ Manifest created → $MANIFEST_FILE"
