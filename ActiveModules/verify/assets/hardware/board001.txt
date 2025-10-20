@@ -1,0 +1,4 @@
+AssetID: board001
+BoardType: RF Module
+SalvageGrade: A
+TeardownNotes: Gold trace intact; capacitor cluster salvageable; minor oxidation near pin array
