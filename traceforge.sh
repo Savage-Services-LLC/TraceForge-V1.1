@@ -3,7 +3,8 @@
 COMMAND=$1
 ASSET_ID=$2
 
-# Load banner
+# Branded CLI banner
+echo "🛠️ TraceForge-V1.2 CLI Router"
 cat banner.txt
 
 # Run environment check
