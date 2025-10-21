@@ -1,28 +1,27 @@
 #!/bin/bash
 
-source env_check.sh
+COMMAND=$1
+ASSET_ID=$2
 
-echo "🛠️ TraceForge-V1.2 CLI Router"
+# Load banner
 cat banner.txt
 
-COMMAND=$1
-ASSET=$2
+# Run environment check
+./env_check.sh
 
-# Log command routing
-echo "[$(date)] ROUTE: $COMMAND $ASSET" >> .audit/trace.log
-
+# Route commands
 case "$COMMAND" in
   teardown)
-    bash ActiveModules/hardware_teardown.sh "$ASSET"
+    ./ActiveModules/hardware_teardown.sh "$ASSET_ID"
     ;;
   overlay)
-    bash ActiveModules/overlay.sh "$ASSET"
+    ./ActiveModules/overlay.sh "$ASSET_ID"
     ;;
   manifest)
-    bash ActiveModules/manifest.sh
+    ./ActiveModules/manifest.sh "$ASSET_ID"
     ;;
   *)
-    echo "❌ Unknown command: $COMMAND"
+    echo "[TraceForge] Unknown command: $COMMAND"
     echo "Usage: ./traceforge.sh [teardown|overlay|manifest] [asset_id]"
     ;;
 esac
