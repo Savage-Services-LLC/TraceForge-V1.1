@@ -1,0 +1,7 @@
+🔧 TraceForge-V1.2 Overlay
+Asset ID: board001
+Type: rf_board
+Salvage Grade: high
+Origin: satellite
+Notes: gold recovery possible
+Overlay Format: branded
