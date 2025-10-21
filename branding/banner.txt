@@ -1,0 +1,1 @@
+echo "🔧 TraceForge-V1.2 — Modular CLI for Salvage + Resale" > banner.txt
