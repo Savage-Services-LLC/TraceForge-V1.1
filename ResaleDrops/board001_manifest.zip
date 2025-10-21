@@ -1,0 +1,5 @@
+board001_manifest.zip
+├── board001.txt              # Asset metadata (type, grade, origin, notes)
+├── board001_overlay.txt      # Branded overlay injected by overlay.sh
+├── trace.log                 # Teardown, overlay, manifest events
+├── env_trace.log             # Git syncs, module loads, config updates
