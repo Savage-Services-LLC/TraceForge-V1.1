@@ -1,33 +1,43 @@
 #!/bin/bash
-# TraceForge-V1.1 Verifier
-# Validates overlays and generates verify_report.csv with flagged entries
 
-OVERLAY_DIR="../overlays"
-REPORT_DIR="./"
-AUDIT_DIR="../audit"
-mkdir -p "$AUDIT_DIR"
+ASSET_ID=$1
+ASSET_FILE="Assets/$ASSET_ID.txt"
+OVERLAY_FILE="Assets/${ASSET_ID}_overlay.txt"
+TRACE_LOG=".audit/trace.log"
+ENV_LOG=".audit/env_trace.log"
+MANIFEST_FILE="ResaleDrops/${ASSET_ID}_manifest.zip"
 
-TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-REPORT_FILE="$REPORT_DIR/verify_report_$TIMESTAMP.csv"
-LOG_FILE="$AUDIT_DIR/verify_$TIMESTAMP.log"
+echo "🔍 Verifying manifest for $ASSET_ID"
 
-echo "[TraceForge] Starting verification..." | tee -a "$LOG_FILE"
-echo "Overlay,Line,Issue,Item,Type,Brand,Condition" > "$REPORT_FILE"
+# Check asset file
+if [ ! -f "$ASSET_FILE" ]; then
+  echo "❌ Missing asset file: $ASSET_FILE"
+  exit 1
+fi
 
-for overlay in "$OVERLAY_DIR"/*.csv; do
-  OVERLAY_NAME=$(basename "$overlay")
-    echo "  → Verifying overlay: $OVERLAY_NAME" | tee -a "$LOG_FILE"
-    
-      lineno=0
-        while IFS=',' read -r ITEM TYPE BRAND CONDITION; do
-            lineno=$((lineno + 1))
-                ISSUE=""
-                    if [[ -z "$ITEM" || -z "$TYPE" || -z "$BRAND" || -z "$CONDITION" ]]; then
-                          ISSUE="Incomplete entry"
-                                echo "    [!] Line $lineno: $ISSUE → $ITEM,$TYPE,$BRAND,$CONDITION" | tee -a "$LOG_FILE"
-                                      echo "$OVERLAY_NAME,$lineno,$ISSUE,$ITEM,$TYPE,$BRAND,$CONDITION" >> "$REPORT_FILE"
-                                          fi
-                                            done < "$overlay"
-                                            done
-                                            
-                                            echo "[TraceForge] Verification complete. Report saved to: $REPORT_FILE" | tee -a "$LOG_FILE"\
+# Check overlay file
+if [ ! -f "$OVERLAY_FILE" ]; then
+  echo "❌ Missing overlay file: $OVERLAY_FILE"
+  exit 1
+fi
+
+# Check audit logs
+if [ ! -f "$TRACE_LOG" ] || [ ! -f "$ENV_LOG" ]; then
+  echo "❌ Missing audit logs"
+  exit 1
+fi
+
+# Check manifest zip
+if [ ! -f "$MANIFEST_FILE" ]; then
+  echo "❌ Manifest not found: $MANIFEST_FILE"
+  exit 1
+fi
+
+# Confirm overlay format
+if ! grep -q "Overlay Format: branded" "$OVERLAY_FILE"; then
+  echo "⚠️ Overlay format not branded"
+  exit 1
+fi
+
+echo "✅ Manifest verified for $ASSET_ID"
+echo "[$(date)] VERIFY: $ASSET_ID | Status=verified" >> .audit/trace.log
