@@ -1,0 +1,4 @@
+type=rf_board
+grade=high
+origin=satellite
+notes=gold recovery possible
